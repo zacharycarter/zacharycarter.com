@@ -48,7 +48,7 @@ html {
 				div(class: 'content') {
 					section(class: 'about') {
 						p {
-							yield 'This website is '
+							yield 'This web application is '
 							a(href: 'https://github.com/zacharycarter/zacharycarter.com', rel: 'external', 'open source')
 							yield ', and licensed under the '
 							a(href: 'http://www.apache.org/licenses/LICENSE-2.0.html', rel: 'external', 'Apache License, Version 2.0')
@@ -60,6 +60,9 @@ html {
 							yield ' application running on '
 							a(href: 'https://www.heroku.com/', rel: 'external', 'Heroku')
 							yield '.'
+						}
+						p {
+							yield 'This web application was made possible by : '
 						}
 					}
 					def credits = [
