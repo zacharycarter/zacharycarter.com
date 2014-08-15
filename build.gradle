@@ -61,5 +61,9 @@ task createScriptsDir {
   }
 }
 configure([watchSass, compileSass]) {
-  // dependsOn createScriptsDir
+  dependsOn createScriptsDir
+}
+
+task stage {
+  dependsOn "installApp"
 }
