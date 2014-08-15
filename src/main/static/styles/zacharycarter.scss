@@ -2,9 +2,6 @@ $logo-font-size-large: 1rem;
 $logo-font-size-medium: 0.8rem;
 
 @import "compass";
-@import "compass/layout/sticky-footer";
-
-@include sticky-footer(25px, "#page-footer");
 
 // common stuff from /ratpack-stylesheets
 @import "palette";
