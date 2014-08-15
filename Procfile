@@ -1,0 +1,1 @@
+web: build/install/zacharycarter.com/bin/zacharycarter.com
