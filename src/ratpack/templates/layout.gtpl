@@ -70,7 +70,7 @@ html {
 						[href: 'http://www.gradle.org/', img: [src: 'gradle.png', alt: 'Gradle logo', width: 149, height: 40]],
 						[href: 'http://groovy.codehaus.org/', img: [src: 'groovy.png', alt: 'Groovy logo', width: 80, height: 40]],
 						[href: 'https://www.heroku.com/', img: [src: 'heroku.png', alt: 'Heroku logo', width: 120, height: 40]],
-						[href: 'http://ratpack.io', img: [src: 'ratpack.png', alt: 'Ratpack logo', width: 156, height: 40]]
+						[href: 'http://ratpack.io', img: [src: 'ratpack-logo-small.png', alt: 'Ratpack logo', width: 156, height: 40]]
 					]
 					section(class: 'credits') {
 						credits.each { credit ->

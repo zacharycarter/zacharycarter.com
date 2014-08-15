@@ -2,6 +2,9 @@ layout 'layout.gtpl',
 bodyContents: contents {
 section(id: "main") {
   article(class: "content") {
+		div(class: 'self-portrait') {
+			img(src: "/assets/images/portrait.png", alt: "Zachary Carter", width: 100, height: 145)
+		}
 		h2('Contact')
 		def links = [
 			[link: [href: 'mailto:carterza@gmail.com'], title: 'carterza@gmail.com'],
