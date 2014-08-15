@@ -2,3 +2,4 @@ build/
 .gradle/
 .sass-cache/
 .jruby/
+src/ratpack/assets/styles/**
