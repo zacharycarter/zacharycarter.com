@@ -23,7 +23,7 @@ section(id: "promo") {
     nav {
       h2('Links')
       def links = [
-        [link: [href: '/resume'], title: 'Resume'],
+        [link: [href: '/resume'], title: 'R&#233;sum&#233;'],
         [link: [href: '/portfolio'], title: 'Portfolio'],
 				[link: [href: '/portfolio'], title: 'Blog']
       ]
@@ -58,6 +58,5 @@ section(id: "main") {
       yield ' about your project or idea.'
     }
   }
-	div(id: 'push') {}
 }
 }

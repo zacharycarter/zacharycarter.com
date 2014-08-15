@@ -75,6 +75,12 @@ ratpack {
     get {
       render groovyMarkupTemplate("index.gtpl")
     }
+	
+		prefix("resume") {
+			get {
+				render groovyMarkupTemplate("resume.gtpl")
+			}
+    }
 
     assets "public"
   }

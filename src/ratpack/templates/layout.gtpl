@@ -21,60 +21,63 @@ html {
     script(src: '/assets/lib/prism/prism.js') {}
   }
   body {
-    header(id: 'page-header') {
-      div(class: 'ratpack-logo') {
-        a(href: '/') { h1('Zachary Carter') }
-        p('Web application, systems &amp; game developer')
-      }
+		div(id: 'wrapper') {
+			header(id: 'page-header') {
+				div(class: 'ratpack-logo') {
+					a(href: '/') { h1('Zachary Carter') }
+					p('Web application, systems &amp; game developer')
+				}
 
-      nav(class: 'social') {
-        h2('I am on&hellip;')
-        a(href: 'http://github.com/zacharycarter/', title: 'Zachary Carter on GitHub', rel: 'external', 'GitHub')
-        newLine()
-        span(class: 'join', '&amp;')
-        newLine()
-        a(href: 'http://twitter.com/hahaitsfunny', title: '@hahaitsfunny on Twitter', rel: 'external', 'Twitter')
-      }
+				nav(class: 'social') {
+					h2('I am on&hellip;')
+					a(href: 'http://github.com/zacharycarter/', title: 'Zachary Carter on GitHub', rel: 'external', 'GitHub')
+					newLine()
+					span(class: 'join', '&amp;')
+					newLine()
+					a(href: 'http://twitter.com/hahaitsfunny', title: '@hahaitsfunny on Twitter', rel: 'external', 'Twitter')
+				}
 
-    }
-
-    bodyContents()
-
-    if (!nobanner) {
-      footer(id: 'page-footer') {
-        div(class: 'content') {
-          section(class: 'about') {
-            p {
-              yield 'This website is '
-              a(href: 'https://github.com/zacharycarter/zacharycarter.com', rel: 'external', 'open source')
-              yield ', and licensed under the '
-              a(href: 'http://www.apache.org/licenses/LICENSE-2.0.html', rel: 'external', 'Apache License, Version 2.0')
+			}
+			
+			bodyContents()
+			div(id: 'wrapper-footer') {}
+		}
+			
+		if (!nobanner) {
+			footer(id: 'page-footer') {
+				div(class: 'content') {
+					section(class: 'about') {
+						p {
+							yield 'This website is '
+							a(href: 'https://github.com/zacharycarter/zacharycarter.com', rel: 'external', 'open source')
+							yield ', and licensed under the '
+							a(href: 'http://www.apache.org/licenses/LICENSE-2.0.html', rel: 'external', 'Apache License, Version 2.0')
 							yield '.'
-            }
-            p {
-              yield 'This site is a '
+						}
+						p {
+							yield 'This site is a '
 							a(href: 'http://www.ratpack.io/', rel: 'external', 'Ratpack')
 							yield ' application running on '
-              a(href: 'https://www.heroku.com/', rel: 'external', 'Heroku')
-              yield '.'
-            }
-          }
-          def credits = [
-            [href: 'https://github.com/', img: [src: 'github.png', alt: 'Octocat', width: 122, height: 40]],
-            [href: 'http://www.gradle.org/', img: [src: 'gradle.png', alt: 'Gradle logo', width: 149, height: 40]],
-            [href: 'http://groovy.codehaus.org/', img: [src: 'groovy.png', alt: 'Groovy logo', width: 80, height: 40]],
-            [href: 'https://www.heroku.com/', img: [src: 'heroku.png', alt: 'Heroku logo', width: 120, height: 40]],
-            [href: 'http://ratpack.io', img: [src: 'ratpack.png', alt: 'Ratpack logo', width: 156, height: 40]]
-          ]
-          section(class: 'credits') {
-            credits.each { credit ->
-              a(href: credit.href, rel: 'external') {
-                img(src: "/assets/images/${credit.img.src}", alt: credit.img.alt, width: credit.img.width, height: credit.img.height)
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+							a(href: 'https://www.heroku.com/', rel: 'external', 'Heroku')
+							yield '.'
+						}
+					}
+					def credits = [
+						[href: 'https://github.com/', img: [src: 'github.png', alt: 'Octocat', width: 122, height: 40]],
+						[href: 'http://www.gradle.org/', img: [src: 'gradle.png', alt: 'Gradle logo', width: 149, height: 40]],
+						[href: 'http://groovy.codehaus.org/', img: [src: 'groovy.png', alt: 'Groovy logo', width: 80, height: 40]],
+						[href: 'https://www.heroku.com/', img: [src: 'heroku.png', alt: 'Heroku logo', width: 120, height: 40]],
+						[href: 'http://ratpack.io', img: [src: 'ratpack.png', alt: 'Ratpack logo', width: 156, height: 40]]
+					]
+					section(class: 'credits') {
+						credits.each { credit ->
+							a(href: credit.href, rel: 'external') {
+								img(src: "/assets/images/${credit.img.src}", alt: credit.img.alt, width: credit.img.width, height: credit.img.height)
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
