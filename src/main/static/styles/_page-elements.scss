@@ -50,8 +50,8 @@ $footer-font-size: 14px !default;
 	@include rhythm($leader: 2, $padding-leader: 1, $padding-trailer: 1, $font-size: $footer-font-size);
 
 	a {
-		@include link-colors($white, $yellow);
-		@include link-underline($white, $yellow);
+		@include link-colors($white, $green);
+		@include link-underline($white, $green);
 	}
 
   margin-bottom: 0;
