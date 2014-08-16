@@ -25,7 +25,7 @@ section(id: "promo") {
       def links = [
         [link: [href: '/resume'], title: 'R&#233;sum&#233;'],
         [link: [href: '/portfolio'], title: 'Portfolio'],
-				[link: [href: '/portfolio'], title: 'Blog']
+				[link: [href: '/blog'], title: 'Blog']
       ]
       ul {
         links.each { link ->
