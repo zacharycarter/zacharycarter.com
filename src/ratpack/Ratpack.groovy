@@ -81,6 +81,18 @@ ratpack {
 				render groovyMarkupTemplate("resume.gtpl")
 			}
     }
+		
+		prefix("portfolio") {
+			get {
+				render groovyMarkupTemplate("portfolio.gtpl")
+			}
+    }
+		
+		prefix("blog") {
+			get {
+				render groovyMarkupTemplate("blog.gtpl")
+			}
+    }
 
     assets "public"
   }

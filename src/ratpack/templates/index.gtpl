@@ -17,7 +17,7 @@ section(id: "promo") {
         yield '.'
       }
 
-      p('My portfolio and blog are both works in progress, so please bear with me as I finish their development. In the mean time feel free to check out my resume, github, facebook, and twitter accounts.')
+      p('My portfolio and blog are both works in progress, so please bear with me as I finish their development. In the mean time feel free to check out my resume, github, and twitter accounts.')
     }
 
     nav {
