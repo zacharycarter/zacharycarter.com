@@ -1,32 +1,73 @@
-@mixin hardwareAccel() {
-	//Improve performance on mobile/tablet devices
-	@include prefixed(transform, translateZ(0));
+$defaultDuration: .3s;
+
+$webkit: true;
+$moz: false;
+$ms: false;
+$o: false;
+
+@mixin prefixed($property, $value) {
+  @if $webkit == true {
+    -webkit-#{$property}: #{$value};
+  }
+
+  @if $moz == true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $ms == true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $o == true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
 }
 
-@mixin improveAntiAlias() {
-	//Improve aliasing on mobile/tablet devices
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
+// prefix keyframes
+@mixin keyframes($name) {
+  @if $webkit == true {
+    @-webkit-keyframes $name {
+      @content;
+    }
+  }
 
-@mixin hacks() {
-  @include hardwareAccel();
-  @include improveAntiAlias();
+  @if $moz == true {
+    @-moz-keyframes $name {
+      @content;
+    }
+  }
+
+  @if $ms == true {
+    @-ms-keyframes $name {
+      @content;
+    }
+  }
+
+  @if $o == true {
+    @-o-keyframes $name {
+      @content;
+    }
+  }
+
+  @keyframes $name {
+    @content;
+  }
 }
 
 @include keyframes(pop) {
 	50% {
-		@include prefixed(transform, scale(1.2));
+		@include transform(scale(1.2) rotate(-10deg));
 	}
 
 	100% {
-		@include prefixed(transform, scale(1));
+		@include transform(scale(1));
 	}
 }
 
 @mixin pop {
 	display: inline-block;
-
-	@include hacks();
 
 	&:hover,
 	&:focus,
@@ -36,6 +77,10 @@
 		@include prefixed(animation-timing-function, linear);
 		@include prefixed(animation-iteration-count, 1);
 	}
+}
+
+#page-header {
+	overflow: visible;
 }
 
 #page-header .social {
@@ -82,11 +127,7 @@
       background-image: simple-image-url('twitter-badge.png');
     }
 
-	@include pop
-	
-    &:active, &:hover {
-      @include transform(rotate(-10deg));
-    }
+		@include pop;
   }
 
   .join {
