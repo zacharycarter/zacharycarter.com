@@ -4,7 +4,7 @@ script:
  - ./gradlew clean check --stacktrace
 cache: 
   directories: 
-	 - $HOME/.gradle
+   - $HOME/.gradle
 jdk: 
  - oraclejdk7
 before_install:
