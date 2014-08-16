@@ -24,11 +24,20 @@
 	list-style-type: none;
 }
 
+.clear {
+	clear: left;
+}
+
 .self-portrait {
+	float: left;
 	display: inline-block;
 	vertical-align: top;
 	padding-left: 2em;
 	@include portrait-background(transparentize($magenta, 0.1));
+}
+
+.pdf {
+	float: right;
 }
 
 .tech {

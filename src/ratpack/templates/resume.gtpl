@@ -2,8 +2,16 @@ layout 'layout.gtpl',
 bodyContents: contents {
 section(id: "main") {
   article(class: "content") {
-		div(class: 'self-portrait') {
-			img(src: "/assets/images/portrait.png", alt: "Zachary Carter", width: 100, height: 145)
+		div(class: "wrapper") {
+			div(class: "pdf") {
+				a(href: "/assets/resume.pdf", download) {
+					img(src: "/assets/images/pdf.png", alt: "Download pdf version", width: 64, height: 64)
+				}
+			}
+			div(class: 'self-portrait') {
+				img(src: "/assets/images/portrait.png", alt: "Zachary Carter", width: 100, height: 145)
+			}
+			br(class: "clear")
 		}
 		h2('Contact')
 		def links = [
