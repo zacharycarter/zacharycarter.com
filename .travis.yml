@@ -1,9 +1,11 @@
 install: true
 language: java
 script: 
-- ./gradlew clean check --stacktrace
+ - ./gradlew clean check --stacktrace
 cache: 
   directories: 
-  - $HOME/.gradle
+	 - $HOME/.gradle
 jdk: 
-- oraclejdk7
+ - oraclejdk7
+before_install:
+ - chmod +x gradlew
