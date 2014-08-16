@@ -164,7 +164,7 @@
 
   @media (min-width: $tablet-portrait) {
     .content {
-      $credits-height: 2 * image-height('bintray.png');
+      $credits-height: 2 * image-height('github.png');
 
       min-height: $credits-height;
 
