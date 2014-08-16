@@ -1,3 +1,43 @@
+@mixin hardwareAccel() {
+	//Improve performance on mobile/tablet devices
+	@include prefixed(transform, translateZ(0));
+}
+
+@mixin improveAntiAlias() {
+	//Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@mixin hacks() {
+  @include hardwareAccel();
+  @include improveAntiAlias();
+}
+
+@include keyframes(pop) {
+	50% {
+		@include prefixed(transform, scale(1.2));
+	}
+
+	100% {
+		@include prefixed(transform, scale(1));
+	}
+}
+
+@mixin pop {
+	display: inline-block;
+
+	@include hacks();
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include prefixed(animation-name, pop);
+		@include prefixed(animation-duration, $defaultDuration);
+		@include prefixed(animation-timing-function, linear);
+		@include prefixed(animation-iteration-count, 1);
+	}
+}
+
 #page-header .social {
   $social-font-size: 1.3rem;
   $social-background-color: $lichtgrau;
@@ -42,6 +82,8 @@
       background-image: simple-image-url('twitter-badge.png');
     }
 
+	@include pop
+	
     &:active, &:hover {
       @include transform(rotate(-10deg));
     }
